@@ -1,7 +1,7 @@
 {
   "name": "spotify-tracks",
   "version": "0.1.0",
-  "description": "Spotify Tracks",
+  "description": "Spotify Profile",
   "main": "index.js",
   "engines": {
     "node": "10.13.0"
