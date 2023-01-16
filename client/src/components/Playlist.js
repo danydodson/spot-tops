@@ -122,7 +122,7 @@ const Playlist = props => {
 
               <TotalTracks>{playlist.tracks.total} Tracks</TotalTracks>
 
-              <RecButton to={`/recommendations/${playlist.id}`}>Get Recommendations</RecButton>
+              <RecButton to={`/recommendations/${playlist.id}`}>Get Recommendations !!!!!</RecButton>
 
               {audioFeatures && (
                 <FeatureChart features={audioFeatures.audio_features} type="horizontalBar" />
