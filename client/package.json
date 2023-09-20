@@ -2,7 +2,7 @@
   "name": "spotify-tracks-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spotify-tracks.herokuapp.com",
+  "homepage": "https://spotify-tracks-3c30242f6648.herokuapp.com",
   "proxy": "http://localhost:8888",
   "engines": {
     "node": "10.13.0"
