@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { theme, mixins, Main } from '../styles';
-const { colors, fontSizes } = theme;
+import React from 'react'
+import styled from 'styled-components/macro'
+import { theme, mixins, Main } from '../styles'
+const { colors, fontSizes } = theme
 
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://spotify-tracks.herokuapp.com/login';
+    : 'https://spotify-tracks-3c30242f6648.herokuapp.com/login'
 
 const Login = styled(Main)`
   ${mixins.flexCenter};
@@ -15,7 +15,7 @@ const Login = styled(Main)`
   h1 {
     font-size: ${fontSizes.xxl};
   }
-`;
+`
 const LoginButton = styled.a`
   display: inline-block;
   background-color: ${colors.green};
@@ -32,13 +32,13 @@ const LoginButton = styled.a`
   &:focus {
     background-color: ${colors.offGreen};
   }
-`;
+`
 
 const LoginScreen = () => (
   <Login>
     <h1>Spotify Tracks</h1>
     <LoginButton href={LOGIN_URI}>Log in to Spotify</LoginButton>
   </Login>
-);
+)
 
-export default LoginScreen;
+export default LoginScreen
