@@ -16,7 +16,7 @@ const TopTracks = () => {
   const apiCalls = {
     long: getTopTracksLong(),
     medium: getTopTracksMedium(),
-    short: getTopTracksShort(),
+    short: getTopTracksShort()
   }
 
   useEffect(() => {
@@ -51,13 +51,7 @@ const TopTracks = () => {
           </RangeButton>
         </Ranges>
       </Header>
-      <TracksContainer>
-        {topTracks ? (
-          topTracks.items.map((track, i) => <TrackItem track={track} key={i} />)
-        ) : (
-          <Loader />
-        )}
-      </TracksContainer>
+      <TracksContainer>{topTracks ? topTracks.items.map((track, i) => <TrackItem track={track} key={i} />) : <Loader />}</TracksContainer>
     </Main>
   )
 }

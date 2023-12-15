@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
-import { getPlaylist, getRecommendationsForTracks, getUser, createPlaylist, addTracksToPlaylist, followPlaylist, doesUserFollowPlaylist, } from '../spotify'
+import { getPlaylist, getRecommendationsForTracks, getUser, createPlaylist, addTracksToPlaylist, followPlaylist, doesUserFollowPlaylist } from '../spotify'
 import { catchErrors } from '../utils'
 
 import TrackItem from './TrackItem'
@@ -82,15 +82,10 @@ const Recommendations = props => {
       {playlist && (
         <PlaylistHeading>
           <h2>
-            Recommended Tracks Based On{' '}
-            <PlaylistLink to={`/playlists/${playlist.id}`}>{playlist.name}</PlaylistLink>
+            Recommended Tracks Based On <PlaylistLink to={`/playlists/${playlist.id}`}>{playlist.name}</PlaylistLink>
           </h2>
           {isFollowing && recPlaylistId ? (
-            <OpenButton
-              href={`https://open.spotify.com/playlist/${recPlaylistId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <OpenButton href={`https://open.spotify.com/playlist/${recPlaylistId}`} target='_blank' rel='noopener noreferrer'>
               Open in Spotify
             </OpenButton>
           ) : (
@@ -98,10 +93,7 @@ const Recommendations = props => {
           )}
         </PlaylistHeading>
       )}
-      <TracksContainer>
-        {recommendations &&
-          recommendations.tracks.map((track, i) => <TrackItem track={track} key={i} />)}
-      </TracksContainer>
+      <TracksContainer>{recommendations && recommendations.tracks.map((track, i) => <TrackItem track={track} key={i} />)}</TracksContainer>
     </Main>
   )
 }
@@ -133,7 +125,7 @@ const PlaylistLink = styled(Link)`
 `
 
 Recommendations.propTypes = {
-  playlistId: PropTypes.string,
+  playlistId: PropTypes.string
 }
 
 export default Recommendations

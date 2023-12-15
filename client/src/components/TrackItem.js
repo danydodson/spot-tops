@@ -14,7 +14,7 @@ const TrackItem = ({ track }) => (
     <TrackContainer to={`/track/${track.id}`}>
       <div>
         <TrackArtwork>
-          {track.album.images.length && <img src={track.album.images[2].url} alt="Album Artwork" />}
+          {track.album.images.length && <img src={track.album.images[2].url} alt='Album Artwork' />}
           <Mask>
             <IconInfo />
           </Mask>
@@ -37,9 +37,7 @@ const TrackItem = ({ track }) => (
             </TrackAlbum>
           )}
         </TrackLeft>
-        <TrackRight>
-          {track.duration_ms && <TrackDuration>{formatDuration(track.duration_ms)}</TrackDuration>}
-        </TrackRight>
+        <TrackRight>{track.duration_ms && <TrackDuration>{formatDuration(track.duration_ms)}</TrackDuration>}</TrackRight>
       </TrackMeta>
     </TrackContainer>
   </li>
@@ -120,7 +118,7 @@ const TrackDuration = styled.span`
 `
 
 TrackItem.propTypes = {
-  track: PropTypes.object.isRequired,
+  track: PropTypes.object.isRequired
 }
 
 export default TrackItem

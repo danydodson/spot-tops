@@ -6,15 +6,7 @@ import styled from 'styled-components/macro'
 import { theme } from '../styles'
 const { fonts } = theme
 
-const properties = [
-  'acousticness',
-  'danceability',
-  'energy',
-  'instrumentalness',
-  'liveness',
-  'speechiness',
-  'valence',
-]
+const properties = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
 
 const FeatureChart = props => {
   const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length
@@ -23,9 +15,7 @@ const FeatureChart = props => {
     const createDataset = features => {
       const dataset = {}
       properties.forEach(prop => {
-        dataset[prop] = features.length
-          ? avg(features.map(feat => feat && feat[prop]))
-          : features[prop]
+        dataset[prop] = features.length ? avg(features.map(feat => feat && feat[prop])) : features[prop]
       })
       return dataset
     }
@@ -51,7 +41,7 @@ const FeatureChart = props => {
                 'rgba(75, 192, 192, 0.3)',
                 'rgba(54, 162, 235, 0.3)',
                 'rgba(104, 132, 245, 0.3)',
-                'rgba(153, 102, 255, 0.3)',
+                'rgba(153, 102, 255, 0.3)'
               ],
               borderColor: [
                 'rgba(255,99,132,1)',
@@ -60,11 +50,11 @@ const FeatureChart = props => {
                 'rgba(75, 192, 192, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(104, 132, 245, 1)',
-                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)'
               ],
-              borderWidth: 1,
-            },
-          ],
+              borderWidth: 1
+            }
+          ]
         },
         options: {
           layout: {
@@ -72,8 +62,8 @@ const FeatureChart = props => {
               left: 0,
               right: 0,
               top: 0,
-              bottom: 0,
-            },
+              bottom: 0
+            }
           },
           title: {
             display: true,
@@ -81,37 +71,37 @@ const FeatureChart = props => {
             fontSize: 18,
             fontFamily: `${fonts.primary}`,
             fontColor: '#ffffff',
-            padding: 30,
+            padding: 30
           },
           legend: {
-            display: false,
+            display: false
           },
           scales: {
             xAxes: [
               {
                 gridLines: {
-                  color: 'rgba(255, 255, 255, 0.3)',
+                  color: 'rgba(255, 255, 255, 0.3)'
                 },
                 ticks: {
                   fontFamily: `${fonts.primary}`,
-                  fontSize: 12,
-                },
-              },
+                  fontSize: 12
+                }
+              }
             ],
             yAxes: [
               {
                 gridLines: {
-                  color: 'rgba(255, 255, 255, 0.3)',
+                  color: 'rgba(255, 255, 255, 0.3)'
                 },
                 ticks: {
                   beginAtZero: true,
                   fontFamily: `${fonts.primary}`,
-                  fontSize: 12,
-                },
-              },
-            ],
-          },
-        },
+                  fontSize: 12
+                }
+              }
+            ]
+          }
+        }
       })
     }
 
@@ -126,7 +116,7 @@ const FeatureChart = props => {
 
   return (
     <Container>
-      <canvas id="chart" width="400" height="400" />
+      <canvas id='chart' width='400' height='400' />
     </Container>
   )
 }
@@ -144,7 +134,7 @@ const Container = styled.div`
 
 FeatureChart.propTypes = {
   features: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
-  type: PropTypes.string,
+  type: PropTypes.string
 }
 
 export default FeatureChart

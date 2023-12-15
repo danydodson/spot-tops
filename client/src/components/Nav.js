@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-import { IconSpotify, IconUser, IconTime, IconMicrophone, IconPlaylist, IconMusic, IconGithub, } from './icons'
+import { IconSpotify, IconUser, IconTime, IconMicrophone, IconPlaylist, IconMusic, IconGithub } from './icons'
 
 import styled from 'styled-components/macro'
 import { theme, mixins, media } from '../styles'
@@ -14,48 +14,44 @@ const NavLink = props => <Link getProps={isActive} {...props} />
 const Nav = () => (
   <Container>
     <Logo>
-      <Link to="/">
+      <Link to='/'>
         <IconSpotify />
       </Link>
     </Logo>
     <Menu>
       <MenuItem>
-        <NavLink to="/">
+        <NavLink to='/'>
           <IconUser />
           <div>Profile</div>
         </NavLink>
       </MenuItem>
       <MenuItem>
-        <NavLink to="artists">
+        <NavLink to='artists'>
           <IconMicrophone />
           <div>Top Artists</div>
         </NavLink>
       </MenuItem>
       <MenuItem>
-        <NavLink to="tracks">
+        <NavLink to='tracks'>
           <IconMusic />
           <div>Top Tracks</div>
         </NavLink>
       </MenuItem>
       <MenuItem>
-        <NavLink to="recent">
+        <NavLink to='recent'>
           <IconTime />
           <div>Recent</div>
         </NavLink>
       </MenuItem>
       <MenuItem>
-        <NavLink to="playlists">
+        <NavLink to='playlists'>
           <IconPlaylist />
           <div>Playlists</div>
         </NavLink>
       </MenuItem>
     </Menu>
     <Github>
-      <a
-        href="https://github.com/danydodson/spotify-tracks"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href='https://github.com/danydodson/spotify-tracks' target='_blank' rel='noopener noreferrer'>
         <IconGithub />
       </a>
     </Github>

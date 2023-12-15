@@ -20,16 +20,16 @@ const Profile = () => (
   <SiteWrapper>
     <Nav />
     <Router primary={false}>
-      <ScrollToTop path="/">
-        <User path="/" />
-        <RecentlyPlayed path="recent" />
-        <TopArtists path="artists" />
-        <TopTracks path="tracks" />
-        <Playlists path="playlists" />
-        <Playlist path="playlists/:playlistId" />
-        <Recommendations path="recommendations/:playlistId" />
-        <Track path="track/:trackId" />
-        <Artist path="artist/:artistId" />
+      <ScrollToTop path='/'>
+        <User path='/' />
+        <RecentlyPlayed path='recent' />
+        <TopArtists path='artists' />
+        <TopTracks path='tracks' />
+        <Playlists path='playlists' />
+        <Playlist path='playlists/:playlistId' />
+        <Recommendations path='recommendations/:playlistId' />
+        <Track path='track/:trackId' />
+        <Artist path='artist/:artistId' />
       </ScrollToTop>
     </Router>
   </SiteWrapper>

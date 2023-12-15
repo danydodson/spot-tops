@@ -72,7 +72,7 @@ export const logout = () => {
 
 const headers = {
   Authorization: `Bearer ${token}`,
-  'Content-Type': 'application/json',
+  'Content-Type': 'application/json'
 }
 
 /**
@@ -85,15 +85,13 @@ export const getUser = () => axios.get('https://api.spotify.com/v1/me', { header
  * Get User's Followed Artists
  * https://developer.spotify.com/documentation/web-api/reference/follow/get-followed/
  */
-export const getFollowing = () =>
-  axios.get('https://api.spotify.com/v1/me/following?type=artist', { headers })
+export const getFollowing = () => axios.get('https://api.spotify.com/v1/me/following?type=artist', { headers })
 
 /**
  * Get Current User's Recently Played Tracks
  * https://developer.spotify.com/documentation/web-api/reference/player/get-recently-played/
  */
-export const getRecentlyPlayed = () =>
-  axios.get('https://api.spotify.com/v1/me/player/recently-played', { headers })
+export const getRecentlyPlayed = () => axios.get('https://api.spotify.com/v1/me/player/recently-played', { headers })
 
 /**
  * Get a List of Current User's Playlists
@@ -107,34 +105,30 @@ export const getPlaylists = () => axios.get('https://api.spotify.com/v1/me/playl
  */
 export const getTopArtistsShort = () =>
   axios.get('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=short_term', {
-    headers,
+    headers
   })
 export const getTopArtistsMedium = () =>
   axios.get('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=medium_term', {
-    headers,
+    headers
   })
-export const getTopArtistsLong = () =>
-  axios.get('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=long_term', { headers })
+export const getTopArtistsLong = () => axios.get('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=long_term', { headers })
 
 /**
  * Get a User's Top Tracks
  * https://developer.spotify.com/documentation/web-api/reference/personalization/get-users-top-artists-and-tracks/
  */
-export const getTopTracksShort = () =>
-  axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=short_term', { headers })
+export const getTopTracksShort = () => axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=short_term', { headers })
 export const getTopTracksMedium = () =>
   axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=medium_term', {
-    headers,
+    headers
   })
-export const getTopTracksLong = () =>
-  axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=long_term', { headers })
+export const getTopTracksLong = () => axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=long_term', { headers })
 
 /**
  * Get an Artist
  * https://developer.spotify.com/documentation/web-api/reference/artists/get-artist/
  */
-export const getArtist = artistId =>
-  axios.get(`https://api.spotify.com/v1/artists/${artistId}`, { headers })
+export const getArtist = artistId => axios.get(`https://api.spotify.com/v1/artists/${artistId}`, { headers })
 
 /**
  * Follow an Artist
@@ -151,7 +145,7 @@ export const followArtist = artistId => {
  */
 export const doesUserFollowArtist = artistId =>
   axios.get(`https://api.spotify.com/v1/me/following/contains?type=artist&ids=${artistId}`, {
-    headers,
+    headers
   })
 
 /**
@@ -160,7 +154,7 @@ export const doesUserFollowArtist = artistId =>
  */
 export const doesUserFollowPlaylist = (playlistId, userId) =>
   axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/followers/contains?ids=${userId}`, {
-    headers,
+    headers
   })
 
 /**
@@ -195,15 +189,13 @@ export const followPlaylist = playlistId => {
  * Get a Playlist
  * https://developer.spotify.com/documentation/web-api/reference/playlists/get-playlist/
  */
-export const getPlaylist = playlistId =>
-  axios.get(`https://api.spotify.com/v1/playlists/${playlistId}`, { headers })
+export const getPlaylist = playlistId => axios.get(`https://api.spotify.com/v1/playlists/${playlistId}`, { headers })
 
 /**
  * Get a Playlist's Tracks
  * https://developer.spotify.com/documentation/web-api/reference/playlists/get-playlists-tracks/
  */
-export const getPlaylistTracks = playlistId =>
-  axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, { headers })
+export const getPlaylistTracks = playlistId => axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, { headers })
 
 /**
  * Return a comma separated string of track IDs from the given array of tracks
@@ -229,50 +221,43 @@ export const getRecommendationsForTracks = tracks => {
   const seed_artists = ''
   const seed_genres = ''
 
-  return axios.get(`https://api.spotify.com/v1/recommendations?seed_tracks=${seed_tracks}&seed_artists=${seed_artists}&seed_genres=${seed_genres}`, { headers, },)
+  return axios.get(`https://api.spotify.com/v1/recommendations?seed_tracks=${seed_tracks}&seed_artists=${seed_artists}&seed_genres=${seed_genres}`, { headers })
 }
 
 /**
  * Get a Track
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/
  */
-export const getTrack = trackId =>
-  axios.get(`https://api.spotify.com/v1/tracks/${trackId}`, { headers })
+export const getTrack = trackId => axios.get(`https://api.spotify.com/v1/tracks/${trackId}`, { headers })
 
 /**
  * Get Audio Analysis for a Track
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/
  */
-export const getTrackAudioAnalysis = trackId =>
-  axios.get(`https://api.spotify.com/v1/audio-analysis/${trackId}`, { headers })
+export const getTrackAudioAnalysis = trackId => axios.get(`https://api.spotify.com/v1/audio-analysis/${trackId}`, { headers })
 
 /**
  * Get Audio Features for a Track
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
  */
-export const getTrackAudioFeatures = trackId =>
-  axios.get(`https://api.spotify.com/v1/audio-features/${trackId}`, { headers })
+export const getTrackAudioFeatures = trackId => axios.get(`https://api.spotify.com/v1/audio-features/${trackId}`, { headers })
 
 export const getUserInfo = () =>
-  axios
-    .all([getUser(), getFollowing(), getPlaylists(), getTopArtistsLong(), getTopTracksLong()])
-    .then(
-      axios.spread((user, followedArtists, playlists, topArtists, topTracks) => ({
-        user: user.data,
-        followedArtists: followedArtists.data,
-        playlists: playlists.data,
-        topArtists: topArtists.data,
-        topTracks: topTracks.data,
-      })),
-    )
+  axios.all([getUser(), getFollowing(), getPlaylists(), getTopArtistsLong(), getTopTracksLong()]).then(
+    axios.spread((user, followedArtists, playlists, topArtists, topTracks) => ({
+      user: user.data,
+      followedArtists: followedArtists.data,
+      playlists: playlists.data,
+      topArtists: topArtists.data,
+      topTracks: topTracks.data
+    }))
+  )
 
 export const getTrackInfo = trackId =>
-  axios
-    .all([getTrack(trackId), getTrackAudioAnalysis(trackId), getTrackAudioFeatures(trackId)])
-    .then(
-      axios.spread((track, audioAnalysis, audioFeatures) => ({
-        track: track.data,
-        audioAnalysis: audioAnalysis.data,
-        audioFeatures: audioFeatures.data,
-      })),
-    )
+  axios.all([getTrack(trackId), getTrackAudioAnalysis(trackId), getTrackAudioFeatures(trackId)]).then(
+    axios.spread((track, audioAnalysis, audioFeatures) => ({
+      track: track.data,
+      audioAnalysis: audioAnalysis.data,
+      audioFeatures: audioFeatures.data
+    }))
+  )

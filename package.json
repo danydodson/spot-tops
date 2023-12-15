@@ -1,5 +1,5 @@
 {
-  "name": "spotify-tops",
+  "name": "spot-tops",
   "version": "0.1.0",
   "description": "A web app for visualizing personalized Spotify data.",
   "main": "index.js",
@@ -51,11 +51,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danydodson/spotify-tops.git"
+    "url": "https://github.com/danydodson/spot-tops.git"
   },
-  "homepage": "https://github.com/danydodson/spotify-tops#readme",
+  "homepage": "https://github.com/danydodson/spot-tops#readme",
   "bugs": {
-    "url": "https://github.com/danydodson/spotify-tops/issues"
+    "url": "https://github.com/danydodson/spot-tops/issues"
   },
   "keywords": [ ]
 }

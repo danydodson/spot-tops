@@ -1,10 +1,10 @@
 {
-  "name": "Spotify Tops",
-  "short_name": "Spotify Tops",
+  "name": "Spot Tops",
+  "short_name": "Spot Tops",
   "start_url": "./",
   "id": "/",
   "description": "A web app for visualizing personalized Spotify data.",
-  "display_override": [ "fullscreen", "minimal-ui" ],
+  "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "theme_color": "#181818",
   "background_color": "#181818",

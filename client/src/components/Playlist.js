@@ -44,33 +44,26 @@ const Playlist = props => {
             <Left>
               {playlist.images.length && (
                 <PlaylistCover>
-                  <img src={playlist.images[0].url} alt="Album Art" />
+                  <img src={playlist.images[0].url} alt='Album Art' />
                 </PlaylistCover>
               )}
 
-              <a href={playlist.external_urls.spotify} target="_blank" rel="noopener noreferrer">
+              <a href={playlist.external_urls.spotify} target='_blank' rel='noopener noreferrer'>
                 <Name>{playlist.name}</Name>
               </a>
 
               <Owner>By {playlist.owner.display_name}</Owner>
 
-              {playlist.description && (
-                <Description dangerouslySetInnerHTML={{ __html: playlist.description }} />
-              )}
+              {playlist.description && <Description dangerouslySetInnerHTML={{ __html: playlist.description }} />}
 
               <TotalTracks>{playlist.tracks.total} Tracks</TotalTracks>
 
               <RecButton to={`/recommendations/${playlist.id}`}>Get Recommendations</RecButton>
 
-              {audioFeatures && (
-                <FeatureChart features={audioFeatures.audio_features} type="horizontalBar" />
-              )}
+              {audioFeatures && <FeatureChart features={audioFeatures.audio_features} type='horizontalBar' />}
             </Left>
             <Right>
-              <ul>
-                {playlist.tracks &&
-                  playlist.tracks.items.map(({ track }, i) => <TrackItem track={track} key={i} />)}
-              </ul>
+              <ul>{playlist.tracks && playlist.tracks.items.map(({ track }, i) => <TrackItem track={track} key={i} />)}</ul>
             </Right>
           </PlaylistContainer>
         </Main>
@@ -152,7 +145,7 @@ const TotalTracks = styled.p`
 `
 
 Playlist.propTypes = {
-  playlistId: PropTypes.string,
+  playlistId: PropTypes.string
 }
 
 export default Playlist

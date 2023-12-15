@@ -33,7 +33,7 @@ const Track = props => {
         <Main>
           <TrackContainer>
             <Artwork>
-              <img src={track.album.images[0].url} alt="Album Artwork" />
+              <img src={track.album.images[0].url} alt='Album Artwork' />
             </Artwork>
             <Info>
               <Title>{track.name}</Title>
@@ -48,20 +48,12 @@ const Track = props => {
                   ))}
               </ArtistName>
               <Album>
-                <a
-                  href={track.album.external_urls.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={track.album.external_urls.spotify} target='_blank' rel='noopener noreferrer'>
                   {track.album.name}
                 </a>{' '}
                 &middot; {getYear(track.album.release_date)}
               </Album>
-              <PlayTrackButton
-                href={track.external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <PlayTrackButton href={track.external_urls.spotify} target='_blank' rel='noopener noreferrer'>
                 Play on Spotify
               </PlayTrackButton>
             </Info>
@@ -112,13 +104,9 @@ const Track = props => {
                 </Feature>
               </Features>
 
-              <FeatureChart features={audioFeatures} type="" />
+              <FeatureChart features={audioFeatures} type='' />
 
-              <DescriptionLink
-                href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <DescriptionLink href='https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/' target='_blank' rel='noopener noreferrer'>
                 Full Description of Audio Features
               </DescriptionLink>
             </AudioFeatures>
@@ -245,7 +233,7 @@ const DescriptionLink = styled.a`
 `
 
 Track.propTypes = {
-  trackId: PropTypes.string,
+  trackId: PropTypes.string
 }
 
 export default Track

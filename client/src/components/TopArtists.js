@@ -17,7 +17,7 @@ const TopArtists = () => {
   const apiCalls = {
     long: getTopArtistsLong(),
     medium: getTopArtistsMedium(),
-    short: getTopArtistsShort(),
+    short: getTopArtistsShort()
   }
 
   useEffect(() => {
@@ -57,12 +57,12 @@ const TopArtists = () => {
           topArtists.items.map(({ id, external_urls, images, name }, i) => (
             <Artist key={i}>
               <ArtistArtwork to={`/artist/${id}`}>
-                {images.length && <img src={images[1].url} alt="Artist" />}
+                {images.length && <img src={images[1].url} alt='Artist' />}
                 <Mask>
                   <IconInfo />
                 </Mask>
               </ArtistArtwork>
-              <ArtistName href={external_urls.spotify} target="_blank" rel="noopener noreferrer">
+              <ArtistName href={external_urls.spotify} target='_blank' rel='noopener noreferrer'>
                 {name}
               </ArtistName>
             </Artist>

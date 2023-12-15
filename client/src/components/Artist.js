@@ -26,7 +26,7 @@ const Artist = props => {
       {artist ? (
         <ArtistContainer>
           <Artwork>
-            <img src={artist.images[0].url} alt="Artist Artwork" />
+            <img src={artist.images[0].url} alt='Artist Artwork' />
           </Artwork>
           <div>
             <ArtistName>{artist.name}</ArtistName>
@@ -123,7 +123,7 @@ const NumLabel = styled.p`
 `
 
 Artist.propTypes = {
-  artistId: PropTypes.string,
+  artistId: PropTypes.string
 }
 
 export default Artist

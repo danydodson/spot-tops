@@ -31,7 +31,7 @@ const Playlists = () => {
               <Playlist key={i}>
                 <PlaylistCover to={id}>
                   {images.length ? (
-                    <PlaylistImage src={images[0].url} alt="Album Art" />
+                    <PlaylistImage src={images[0].url} alt='Album Art' />
                   ) : (
                     <PlaceholderArtwork>
                       <PlaceholderContent>
@@ -40,7 +40,7 @@ const Playlists = () => {
                     </PlaceholderArtwork>
                   )}
                   <PlaylistMask>
-                    <i className="fas fa-info-circle" />
+                    <i className='fas fa-info-circle' />
                   </PlaylistMask>
                 </PlaylistCover>
                 <div>

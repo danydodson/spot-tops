@@ -22,13 +22,7 @@ const RecentlyPlayed = () => {
   return (
     <Main>
       <h2>Recently Played Tracks</h2>
-      <TracksContainer>
-        {recentlyPlayed ? (
-          recentlyPlayed.items.map(({ track }, i) => <TrackItem track={track} key={i} />)
-        ) : (
-          <Loader />
-        )}
-      </TracksContainer>
+      <TracksContainer>{recentlyPlayed ? recentlyPlayed.items.map(({ track }, i) => <TrackItem track={track} key={i} />) : <Loader />}</TracksContainer>
     </Main>
   )
 }
