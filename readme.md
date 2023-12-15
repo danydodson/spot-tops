@@ -44,3 +44,4 @@ Built with a bunch of things, but to name a few:
 4. Add `http://app-name.herokuapp.com/callback` as a Redirect URI in the spotify application settings
 
 5. Once the app is live on Heroku, hitting http://app-name.herokuapp.com/login should be the same as hitting http://localhost:8888/login
+ 
