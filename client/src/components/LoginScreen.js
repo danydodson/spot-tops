@@ -6,7 +6,7 @@ const { colors, fontSizes } = theme
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://spotify-tracks-3c30242f6648.herokuapp.com/login'
+    : 'https://spotify-tops-fb12eb433b71.herokuapp.com/login'
 
 const Login = styled(Main)`
   ${mixins.flexCenter};
