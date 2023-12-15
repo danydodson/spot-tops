@@ -3,22 +3,6 @@ import styled from 'styled-components/macro'
 import { theme } from '../../styles'
 const { colors } = theme
 
-const Loader = styled.div`
-  margin: 0 0 2em;
-  height: 100px;
-  width: 50px;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-
-  svg path,
-  svg rect {
-    fill: ${colors.grey};
-  }
-`
-
 const IconLoader = () => (
   <Loader>
     <svg
@@ -30,7 +14,8 @@ const IconLoader = () => (
       width="24px"
       height="30px"
       viewBox="0 0 24 30"
-      xmlSpace="preserve">
+      xmlSpace="preserve"
+    >
       <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
         <animate
           attributeName="opacity"
@@ -112,5 +97,21 @@ const IconLoader = () => (
     </svg>
   </Loader>
 )
+
+const Loader = styled.div`
+  margin: 0 0 2em;
+  height: 100px;
+  width: 50px;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+
+  svg path,
+  svg rect {
+    fill: ${colors.grey};
+  }
+`
 
 export default IconLoader

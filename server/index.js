@@ -6,8 +6,8 @@ require('dotenv').config()
 
 const CLIENT_ID = process.env.CLIENT_ID
 const CLIENT_SECRET = process.env.CLIENT_SECRET
-let REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:8888/callback'
-let FRONTEND_URI = process.env.FRONTEND_URI || 'http://localhost:3000'
+let REDIRECT_URI = process.env.REDIRECT_URI
+let FRONTEND_URI = process.env.FRONTEND_URI
 const PORT = process.env.PORT || 8888
 
 if (process.env.NODE_ENV !== 'production') {
@@ -87,8 +87,7 @@ if (cluster.isMaster) {
     res.cookie(stateKey, state)
 
     // your application requests authorization
-    const scope =
-      'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read user-follow-modify playlist-read-private playlist-read-collaborative playlist-modify-public'
+    const scope = 'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read user-follow-modify playlist-read-private playlist-read-collaborative playlist-modify-public'
 
     res.redirect(
       `https://accounts.spotify.com/authorize?${querystring.stringify({

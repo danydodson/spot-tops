@@ -1,7 +1,7 @@
 {
   "name": "spotify-tops",
   "version": "0.1.0",
-  "description": "A web app for visualizing personalized Spotify data",
+  "description": "A web app for visualizing personalized Spotify data.",
   "main": "index.js",
   "engines": {
     "node": "10.13.0"
@@ -24,8 +24,8 @@
     "request": "~2.88.0"
   },
   "devDependencies": {
-    "@upstatement/eslint-config": "^0.4.3",
-    "@upstatement/prettier-config": "^0.3.0",
+    "@danydodson/eslint-config-react": "^2.4.0",
+    "@danydodson/prettier-config": "^1.6.0",
     "concurrently": "^5.1.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",

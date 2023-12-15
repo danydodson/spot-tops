@@ -16,14 +16,6 @@ import Artist from './Artist'
 import styled from 'styled-components/macro'
 import { theme, media } from '../styles'
 
-const SiteWrapper = styled.div`
-  padding-left: ${theme.navWidth};
-  ${media.tablet`
-    padding-left: 0;
-    padding-bottom: 50px;
-  `};
-`
-
 const Profile = () => (
   <SiteWrapper>
     <Nav />
@@ -42,5 +34,13 @@ const Profile = () => (
     </Router>
   </SiteWrapper>
 )
+
+const SiteWrapper = styled.div`
+  padding-left: ${theme.navWidth};
+  ${media.tablet`
+    padding-left: 0;
+    padding-bottom: 50px;
+  `};
+`
 
 export default Profile

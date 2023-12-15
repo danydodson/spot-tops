@@ -1,14 +1,7 @@
 import React from 'react'
 
 const IconTime = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    x="0px"
-    y="0px"
-    width="30px"
-    height="29px"
-    viewBox="0 0 510 510">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="30px" height="29px" viewBox="0 0 510 510">
     <title>Time</title>
     <g>
       <g id="history">

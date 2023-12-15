@@ -1,5 +1,5 @@
 {
-  "extends": "@upstatement",
+  "extends": "@danydodson",
   "parserOptions": {
     "sourceType": "module"
   },

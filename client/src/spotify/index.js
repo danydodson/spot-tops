@@ -229,12 +229,7 @@ export const getRecommendationsForTracks = tracks => {
   const seed_artists = ''
   const seed_genres = ''
 
-  return axios.get(
-    `https://api.spotify.com/v1/recommendations?seed_tracks=${seed_tracks}&seed_artists=${seed_artists}&seed_genres=${seed_genres}`,
-    {
-      headers,
-    },
-  )
+  return axios.get(`https://api.spotify.com/v1/recommendations?seed_tracks=${seed_tracks}&seed_artists=${seed_artists}&seed_genres=${seed_genres}`, { headers, },)
 }
 
 /**

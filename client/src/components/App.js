@@ -7,11 +7,6 @@ import Profile from './Profile'
 import styled from 'styled-components/macro'
 import { GlobalStyle } from '../styles'
 
-const AppContainer = styled.div`
-  height: 100%;
-  min-height: 100vh;
-`
-
 const App = () => {
   const [accessToken, setAccessToken] = useState('')
 
@@ -27,5 +22,10 @@ const App = () => {
     </AppContainer>
   )
 }
+
+const AppContainer = styled.div`
+  height: 100%;
+  min-height: 100vh;
+`
 
 export default App

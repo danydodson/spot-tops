@@ -2,7 +2,7 @@
   "name": "spotify-tops-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spotify-tops-fb12eb433b71.herokuapp.com",
+  "homepage": "https://spot-tops.com",
   "proxy": "http://localhost:8888",
   "engines": {
     "node": "10.13.0"
@@ -30,7 +30,7 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@upstatement/eslint-config": "^0.4.2",
+    "@danydodson/eslint-config-react": "2.4.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",

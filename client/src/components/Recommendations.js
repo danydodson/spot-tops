@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
-import {
-  getPlaylist,
-  getRecommendationsForTracks,
-  getUser,
-  createPlaylist,
-  addTracksToPlaylist,
-  followPlaylist,
-  doesUserFollowPlaylist,
-} from '../spotify'
+import { getPlaylist, getRecommendationsForTracks, getUser, createPlaylist, addTracksToPlaylist, followPlaylist, doesUserFollowPlaylist, } from '../spotify'
 import { catchErrors } from '../utils'
 
 import TrackItem from './TrackItem'
@@ -17,32 +9,6 @@ import TrackItem from './TrackItem'
 import styled from 'styled-components/macro'
 import { theme, mixins, media, Main } from '../styles'
 const { colors } = theme
-
-const PlaylistHeading = styled.div`
-  ${mixins.flexBetween};
-  ${media.tablet`
-    flex-direction: column;
-
-  `};
-  h2 {
-    margin-bottom: 0;
-  }
-`
-const SaveButton = styled.button`
-  ${mixins.greenButton};
-`
-const OpenButton = styled.a`
-  ${mixins.button};
-`
-const TracksContainer = styled.ul`
-  margin-top: 50px;
-`
-const PlaylistLink = styled(Link)`
-  &:hover,
-  &:focus {
-    color: ${colors.offGreen};
-  }
-`
 
 const Recommendations = props => {
   const { playlistId } = props
@@ -123,7 +89,8 @@ const Recommendations = props => {
             <OpenButton
               href={`https://open.spotify.com/playlist/${recPlaylistId}`}
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               Open in Spotify
             </OpenButton>
           ) : (
@@ -138,6 +105,32 @@ const Recommendations = props => {
     </Main>
   )
 }
+
+const PlaylistHeading = styled.div`
+  ${mixins.flexBetween};
+  ${media.tablet`
+    flex-direction: column;
+
+  `};
+  h2 {
+    margin-bottom: 0;
+  }
+`
+const SaveButton = styled.button`
+  ${mixins.greenButton};
+`
+const OpenButton = styled.a`
+  ${mixins.button};
+`
+const TracksContainer = styled.ul`
+  margin-top: 50px;
+`
+const PlaylistLink = styled(Link)`
+  &:hover,
+  &:focus {
+    color: ${colors.offGreen};
+  }
+`
 
 Recommendations.propTypes = {
   playlistId: PropTypes.string,

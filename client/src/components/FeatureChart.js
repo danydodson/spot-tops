@@ -16,17 +16,6 @@ const properties = [
   'valence',
 ]
 
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-
-  #chart {
-    margin: 0 auto;
-    margin-top: -30px;
-  }
-`
-
 const FeatureChart = props => {
   const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length
 
@@ -141,6 +130,17 @@ const FeatureChart = props => {
     </Container>
   )
 }
+
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+
+  #chart {
+    margin: 0 auto;
+    margin-top: -30px;
+  }
+`
 
 FeatureChart.propTypes = {
   features: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,

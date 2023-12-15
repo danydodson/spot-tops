@@ -1,13 +1,7 @@
 import React from 'react'
 
 const IconMicrophone = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    x="0px"
-    y="0px"
-    viewBox="0 0 47.5 47.5"
-    xmlSpace="preserve">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 47.5 47.5" xmlSpace="preserve">
     <title>Microphone</title>
     <g>
       <path d="M44.159,3.341C41.932,1.115,39.013,0,36.093,0c-2.919,0-5.838,1.114-8.064,3.341c-4.454,4.454-4.454,11.677,0,16.131     c2.227,2.227,5.146,3.341,8.064,3.341s5.839-1.114,8.066-3.341C48.613,15.019,48.613,7.796,44.159,3.341z" />

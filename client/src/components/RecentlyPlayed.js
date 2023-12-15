@@ -8,10 +8,6 @@ import TrackItem from './TrackItem'
 import styled from 'styled-components/macro'
 import { Main } from '../styles'
 
-const TracksContainer = styled.ul`
-  margin-top: 50px;
-`
-
 const RecentlyPlayed = () => {
   const [recentlyPlayed, setRecentlyPlayed] = useState(null)
 
@@ -36,5 +32,9 @@ const RecentlyPlayed = () => {
     </Main>
   )
 }
+
+const TracksContainer = styled.ul`
+  margin-top: 50px;
+`
 
 export default RecentlyPlayed

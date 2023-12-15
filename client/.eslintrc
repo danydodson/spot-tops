@@ -1,4 +1,4 @@
 {
-  "extends": "@upstatement/eslint-config/react"
+  "extends": "@danydodson/eslint-config-react"
 }
 

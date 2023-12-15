@@ -1,13 +1,7 @@
 import React from 'react'
 
 const IconPlaylist = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    x="0px"
-    y="0px"
-    viewBox="0 0 405.333 405.333"
-    xmlSpace="preserve">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 405.333 405.333" xmlSpace="preserve">
     <g>
       <rect x="0" y="53.333" width="256" height="42.667" />
       <rect x="0" y="138.667" width="256" height="42.667" />
