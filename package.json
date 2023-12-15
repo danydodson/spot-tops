@@ -4,7 +4,7 @@
   "description": "A web app for visualizing personalized Spotify data.",
   "main": "index.js",
   "engines": {
-    "node": "10.13.0"
+    "node": "10.24.1"
   },
   "scripts": {
     "client:install": "cd client && yarn",

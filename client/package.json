@@ -5,7 +5,7 @@
   "homepage": "https://spot-tops.com",
   "proxy": "http://localhost:8888",
   "engines": {
-    "node": "10.13.0"
+    "node": "10.24.1"
   },
   "babelMacros": {
     "styledComponents": {
