@@ -106,9 +106,9 @@ const Track = props => {
 
               <FeatureChart features={audioFeatures} type='' />
 
-              <DescriptionLink href='https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/' target='_blank' rel='noopener noreferrer'>
+              {/* <DescriptionLink href='https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/' target='_blank' rel='noopener noreferrer'>
                 Full Description of Audio Features
-              </DescriptionLink>
+              </DescriptionLink> */}
             </AudioFeatures>
           )}
         </Main>
