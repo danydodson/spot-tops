@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconTime = () => (
   <svg
@@ -16,6 +16,6 @@ const IconTime = () => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default IconTime;
+export default IconTime

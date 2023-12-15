@@ -1,4 +1,4 @@
-# Spotify Tracks
+# Spotify Tops
 
 > A web app for visualizing personalized Spotify data
 

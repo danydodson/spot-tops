@@ -1,6 +1,6 @@
-import styled from 'styled-components/macro';
-import theme from './theme';
-const { fontSizes } = theme;
+import styled from 'styled-components/macro'
+import theme from './theme'
+const { fontSizes } = theme
 
 const Button = styled.button`
   font-size: ${fontSizes.base};
@@ -12,6 +12,6 @@ const Button = styled.button`
   &:active {
     outline: 0;
   }
-`;
+`
 
-export default Button;
+export default Button

@@ -51,6 +51,6 @@ const theme = {
 
   navWidth: '100px',
   navHeight: '70px',
-};
+}
 
-export default theme;
+export default theme

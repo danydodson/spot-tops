@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components/macro';
-import theme from './theme';
-const { colors, fontSizes, fonts } = theme;
+import { createGlobalStyle } from 'styled-components/macro'
+import theme from './theme'
+const { colors, fontSizes, fonts } = theme
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -179,6 +179,6 @@ const GlobalStyle = createGlobalStyle`
       outline: 0;
     }
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

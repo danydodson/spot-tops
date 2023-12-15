@@ -2,7 +2,7 @@
   "name": "spotify-tops-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spotify-tops-fb12eb433b71.herokuapp.com/",
+  "homepage": "https://spotify-tops-fb12eb433b71.herokuapp.com",
   "proxy": "http://localhost:8888",
   "engines": {
     "node": "10.13.0"

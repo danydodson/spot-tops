@@ -1,6 +1,6 @@
-import { css } from 'styled-components/macro';
-import theme from './theme';
-const { colors, fontSizes } = theme;
+import { css } from 'styled-components/macro'
+import theme from './theme'
+const { colors, fontSizes } = theme
 
 const mixins = {
   flexCenter: css`
@@ -81,6 +81,6 @@ const mixins = {
       outline: 0;
     }
   `,
-};
+}
 
-export default mixins;
+export default mixins

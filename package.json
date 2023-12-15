@@ -1,7 +1,7 @@
 {
   "name": "spotify-tops",
   "version": "0.1.0",
-  "description": "Spotify Profile",
+  "description": "A web app for visualizing personalized Spotify data",
   "main": "index.js",
   "engines": {
     "node": "10.13.0"
@@ -57,5 +57,5 @@
   "bugs": {
     "url": "https://github.com/danydodson/spotify-tops/issues"
   },
-  "keywords": []
+  "keywords": [ ]
 }

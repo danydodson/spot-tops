@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from '@reach/router';
-import PropTypes from 'prop-types';
-import { getPlaylist, getAudioFeaturesForTracks } from '../spotify';
-import { catchErrors } from '../utils';
+import React, { useState, useEffect } from 'react'
+import { Link } from '@reach/router'
+import PropTypes from 'prop-types'
+import { getPlaylist, getAudioFeaturesForTracks } from '../spotify'
+import { catchErrors } from '../utils'
 
-import Loader from './Loader';
-import TrackItem from './TrackItem';
-import FeatureChart from './FeatureChart';
+import Loader from './Loader'
+import TrackItem from './TrackItem'
+import FeatureChart from './FeatureChart'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media, Main } from '../styles';
-const { colors, fontSizes, spacing } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media, Main } from '../styles'
+const { colors, fontSizes, spacing } = theme
 
 const PlaylistContainer = styled.div`
   display: flex;
   ${media.tablet`
     display: block;
   `};
-`;
+`
 const Left = styled.div`
   width: 30%;
   text-align: center;
@@ -26,14 +26,14 @@ const Left = styled.div`
     width: 100%;
     min-width: auto;
   `};
-`;
+`
 const Right = styled.div`
   flex-grow: 1;
   margin-left: 50px;
   ${media.tablet`
     margin: 50px 0 0;
   `};
-`;
+`
 const PlaylistCover = styled.div`
   ${mixins.coverShadow};
   width: 100%;
@@ -42,12 +42,12 @@ const PlaylistCover = styled.div`
   ${media.tablet`
     display: none;
   `};
-`;
+`
 const Name = styled.h3`
   font-weight: 700;
   font-size: ${fontSizes.xl};
   margin-top: 20px;
-`;
+`
 const Description = styled.p`
   font-size: ${fontSizes.sm};
   color: ${colors.lightGrey};
@@ -59,44 +59,44 @@ const Description = styled.p`
       border-bottom: 1px solid ${colors.white};
     }
   }
-`;
+`
 const RecButton = styled(Link)`
   ${mixins.greenButton};
   margin-bottom: ${spacing.lg};
-`;
+`
 const Owner = styled.p`
   font-size: ${fontSizes.sm};
   color: ${colors.lightGrey};
-`;
+`
 const TotalTracks = styled.p`
   font-size: ${fontSizes.sm};
   color: ${colors.white};
   margin-top: 20px;
-`;
+`
 
 const Playlist = props => {
-  const { playlistId } = props;
+  const { playlistId } = props
 
-  const [playlist, setPlaylist] = useState(null);
-  const [audioFeatures, setAudioFeatures] = useState(null);
+  const [playlist, setPlaylist] = useState(null)
+  const [audioFeatures, setAudioFeatures] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await getPlaylist(playlistId);
-      setPlaylist(data);
-    };
-    catchErrors(fetchData());
-  }, [playlistId]);
+      const { data } = await getPlaylist(playlistId)
+      setPlaylist(data)
+    }
+    catchErrors(fetchData())
+  }, [playlistId])
 
   useEffect(() => {
     const fetchData = async () => {
       if (playlist) {
-        const { data } = await getAudioFeaturesForTracks(playlist.tracks.items);
-        setAudioFeatures(data);
+        const { data } = await getAudioFeaturesForTracks(playlist.tracks.items)
+        setAudioFeatures(data)
       }
-    };
-    catchErrors(fetchData());
-  }, [playlist]);
+    }
+    catchErrors(fetchData())
+  }, [playlist])
 
   return (
     <React.Fragment>
@@ -140,11 +140,11 @@ const Playlist = props => {
         <Loader />
       )}
     </React.Fragment>
-  );
-};
+  )
+}
 
 Playlist.propTypes = {
   playlistId: PropTypes.string,
-};
+}
 
-export default Playlist;
+export default Playlist

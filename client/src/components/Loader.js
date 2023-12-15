@@ -1,13 +1,13 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components/macro';
-import { theme, mixins } from '../styles';
-const { colors } = theme;
+import React from 'react'
+import styled, { keyframes } from 'styled-components/macro'
+import { theme, mixins } from '../styles'
+const { colors } = theme
 
 const Container = styled.div`
   ${mixins.flexCenter};
   width: 100%;
   height: 90vh;
-`;
+`
 const dance = keyframes`
   from {
     height: 10px;
@@ -15,7 +15,7 @@ const dance = keyframes`
   to {
     height: 100%;
   }
-`;
+`
 const Bars = styled.div`
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ const Bars = styled.div`
   position: relative;
   left: 0;
   right: 0;
-`;
+`
 const Bar = styled.div`
   width: 10px;
   height: 5px;
@@ -42,7 +42,7 @@ const Bar = styled.div`
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: ${props => props.delay || '0ms'};
-`;
+`
 
 const Loader = () => (
   <Container>
@@ -54,6 +54,6 @@ const Loader = () => (
       <Bar delay="190ms" />
     </Bars>
   </Container>
-);
+)
 
-export default Loader;
+export default Loader

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconInfo = () => (
   <svg
@@ -17,6 +17,6 @@ const IconInfo = () => (
 			C25.897,14.648,24.746,15.872,22.946,15.872z"
     />
   </svg>
-);
+)
 
-export default IconInfo;
+export default IconInfo

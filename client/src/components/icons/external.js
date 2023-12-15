@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconExternal = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818">
@@ -15,6 +15,6 @@ const IconExternal = () => (
       />
     </g>
   </svg>
-);
+)
 
-export default IconExternal;
+export default IconExternal

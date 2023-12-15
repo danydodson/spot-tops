@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from 'react'
+import { Link } from '@reach/router'
 
 import {
   IconSpotify,
@@ -9,11 +9,11 @@ import {
   IconPlaylist,
   IconMusic,
   IconGithub,
-} from './icons';
+} from './icons'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media } from '../styles';
-const { colors } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media } from '../styles'
+const { colors } = theme
 
 const Container = styled.nav`
   ${mixins.coverShadow};
@@ -42,7 +42,7 @@ const Container = styled.nav`
       height: 100%;
     `};
   }
-`;
+`
 const Logo = styled.div`
   color: ${colors.green};
   margin-top: 30px;
@@ -59,7 +59,7 @@ const Logo = styled.div`
   svg {
     width: 50px;
   }
-`;
+`
 const Github = styled.div`
   color: ${colors.lightGrey};
   width: 45px;
@@ -78,7 +78,7 @@ const Github = styled.div`
       width: 30px;
     }
   }
-`;
+`
 const Menu = styled.ul`
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ const Menu = styled.ul`
     align-items: flex-end;
     justify-content: center;
   `};
-`;
+`
 const MenuItem = styled.li`
   color: ${colors.lightGrey};
   font-size: 11px;
@@ -126,11 +126,11 @@ const MenuItem = styled.li`
     height: 20px;
     margin-bottom: 7px;
   }
-`;
+`
 
-const isActive = ({ isCurrent }) => (isCurrent ? { className: 'active' } : null);
+const isActive = ({ isCurrent }) => (isCurrent ? { className: 'active' } : null)
 
-const NavLink = props => <Link getProps={isActive} {...props} />;
+const NavLink = props => <Link getProps={isActive} {...props} />
 
 const Nav = () => (
   <Container>
@@ -180,6 +180,6 @@ const Nav = () => (
       </a>
     </Github>
   </Container>
-);
+)
 
-export default Nav;
+export default Nav

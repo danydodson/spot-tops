@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from '@reach/router';
-import { getPlaylists } from '../spotify';
-import { catchErrors } from '../utils';
+import React, { useState, useEffect } from 'react'
+import { Link } from '@reach/router'
+import { getPlaylists } from '../spotify'
+import { catchErrors } from '../utils'
 
-import Loader from './Loader';
-import { IconMusic } from './icons';
+import Loader from './Loader'
+import { IconMusic } from './icons'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media, Main } from '../styles';
-const { colors, fontSizes, spacing } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media, Main } from '../styles'
+const { colors, fontSizes, spacing } = theme
 
 const Wrapper = styled.div`
   ${mixins.flexBetween};
   align-items: flex-start;
-`;
+`
 const PlaylistsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -26,12 +26,12 @@ const PlaylistsContainer = styled.div`
   ${media.phablet`
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   `};
-`;
+`
 const Playlist = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-`;
+`
 const PlaylistMask = styled.div`
   ${mixins.flexCenter};
   position: absolute;
@@ -46,10 +46,10 @@ const PlaylistMask = styled.div`
   color: ${colors.white};
   opacity: 0;
   transition: ${theme.transition};
-`;
+`
 const PlaylistImage = styled.img`
   object-fit: cover;
-`;
+`
 const PlaylistCover = styled(Link)`
   ${mixins.coverShadow};
   position: relative;
@@ -61,7 +61,7 @@ const PlaylistCover = styled(Link)`
       opacity: 1;
     }
   }
-`;
+`
 const PlaceholderArtwork = styled.div`
   ${mixins.flexCenter};
   position: relative;
@@ -72,7 +72,7 @@ const PlaceholderArtwork = styled.div`
     width: 50px;
     height: 50px;
   }
-`;
+`
 const PlaceholderContent = styled.div`
   ${mixins.flexCenter};
   position: absolute;
@@ -80,7 +80,7 @@ const PlaceholderContent = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-`;
+`
 const PlaylistName = styled(Link)`
   display: inline;
   border-bottom: 1px solid transparent;
@@ -88,25 +88,25 @@ const PlaylistName = styled(Link)`
   &:focus {
     border-bottom: 1px solid ${colors.white};
   }
-`;
+`
 const TotalTracks = styled.div`
   text-transform: uppercase;
   margin: 5px 0;
   color: ${colors.lightGrey};
   font-size: ${fontSizes.xs};
   letter-spacing: 1px;
-`;
+`
 
 const Playlists = () => {
-  const [playlists, setPlaylists] = useState(null);
+  const [playlists, setPlaylists] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await getPlaylists();
-      setPlaylists(data);
-    };
-    catchErrors(fetchData());
-  }, []);
+      const { data } = await getPlaylists()
+      setPlaylists(data)
+    }
+    catchErrors(fetchData())
+  }, [])
 
   return (
     <Main>
@@ -142,7 +142,7 @@ const Playlists = () => {
         </PlaylistsContainer>
       </Wrapper>
     </Main>
-  );
-};
+  )
+}
 
-export default Playlists;
+export default Playlists

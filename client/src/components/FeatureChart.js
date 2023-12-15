@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Chart from 'chart.js';
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
+import Chart from 'chart.js'
 
-import styled from 'styled-components/macro';
-import { theme } from '../styles';
-const { fonts } = theme;
+import styled from 'styled-components/macro'
+import { theme } from '../styles'
+const { fonts } = theme
 
 const properties = [
   'acousticness',
@@ -14,7 +14,7 @@ const properties = [
   'liveness',
   'speechiness',
   'valence',
-];
+]
 
 const Container = styled.div`
   position: relative;
@@ -25,27 +25,27 @@ const Container = styled.div`
     margin: 0 auto;
     margin-top: -30px;
   }
-`;
+`
 
 const FeatureChart = props => {
-  const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
+  const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length
 
   useEffect(() => {
     const createDataset = features => {
-      const dataset = {};
+      const dataset = {}
       properties.forEach(prop => {
         dataset[prop] = features.length
           ? avg(features.map(feat => feat && feat[prop]))
-          : features[prop];
-      });
-      return dataset;
-    };
+          : features[prop]
+      })
+      return dataset
+    }
 
     const createChart = dataset => {
-      const { type } = props;
-      const ctx = document.getElementById('chart');
-      const labels = Object.keys(dataset);
-      const data = Object.values(dataset);
+      const { type } = props
+      const ctx = document.getElementById('chart')
+      const labels = Object.keys(dataset)
+      const data = Object.values(dataset)
 
       new Chart(ctx, {
         type: type || 'bar',
@@ -123,28 +123,28 @@ const FeatureChart = props => {
             ],
           },
         },
-      });
-    };
+      })
+    }
 
     const parseData = () => {
-      const { features } = props;
-      const dataset = createDataset(features);
-      createChart(dataset);
-    };
+      const { features } = props
+      const dataset = createDataset(features)
+      createChart(dataset)
+    }
 
-    parseData();
-  }, [props]);
+    parseData()
+  }, [props])
 
   return (
     <Container>
       <canvas id="chart" width="400" height="400" />
     </Container>
-  );
-};
+  )
+}
 
 FeatureChart.propTypes = {
   features: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   type: PropTypes.string,
-};
+}
 
-export default FeatureChart;
+export default FeatureChart

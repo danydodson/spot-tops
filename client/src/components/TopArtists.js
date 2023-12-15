@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from '@reach/router';
-import { getTopArtistsShort, getTopArtistsMedium, getTopArtistsLong } from '../spotify';
-import { catchErrors } from '../utils';
+import React, { useState, useEffect } from 'react'
+import { Link } from '@reach/router'
+import { getTopArtistsShort, getTopArtistsMedium, getTopArtistsLong } from '../spotify'
+import { catchErrors } from '../utils'
 
-import { IconInfo } from './icons';
-import Loader from './Loader';
+import { IconInfo } from './icons'
+import Loader from './Loader'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media, Main } from '../styles';
-const { colors, fontSizes, spacing } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media, Main } from '../styles'
+const { colors, fontSizes, spacing } = theme
 
 const Header = styled.header`
   ${mixins.flexBetween};
@@ -18,7 +18,7 @@ const Header = styled.header`
   h2 {
     margin: 0;
   }
-`;
+`
 const Ranges = styled.div`
   display: flex;
   margin-right: -11px;
@@ -26,7 +26,7 @@ const Ranges = styled.div`
     justify-content: space-around;
     margin: 30px 0 0;
   `};
-`;
+`
 const RangeButton = styled.button`
   background-color: transparent;
   color: ${props => (props.isActive ? colors.white : colors.lightGrey)};
@@ -42,7 +42,7 @@ const RangeButton = styled.button`
     line-height: 1.5;
     white-space: nowrap;
   }
-`;
+`
 const ArtistsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -54,13 +54,13 @@ const ArtistsContainer = styled.div`
   ${media.phablet`
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   `};
-`;
+`
 const Artist = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-`;
+`
 const Mask = styled.div`
   ${mixins.flexCenter};
   position: absolute;
@@ -79,7 +79,7 @@ const Mask = styled.div`
   svg {
     width: 25px;
   }
-`;
+`
 const ArtistArtwork = styled(Link)`
   display: inline-block;
   position: relative;
@@ -113,7 +113,7 @@ const ArtistArtwork = styled(Link)`
       height: 120px;
     `};
   }
-`;
+`
 const ArtistName = styled.a`
   margin: ${spacing.base} 0;
   border-bottom: 1px solid transparent;
@@ -121,33 +121,33 @@ const ArtistName = styled.a`
   &:focus {
     border-bottom: 1px solid ${colors.white};
   }
-`;
+`
 
 const TopArtists = () => {
-  const [topArtists, setTopArtists] = useState(null);
-  const [activeRange, setActiveRange] = useState('long');
+  const [topArtists, setTopArtists] = useState(null)
+  const [activeRange, setActiveRange] = useState('long')
 
   const apiCalls = {
     long: getTopArtistsLong(),
     medium: getTopArtistsMedium(),
     short: getTopArtistsShort(),
-  };
+  }
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await getTopArtistsLong();
-      setTopArtists(data);
-    };
-    catchErrors(fetchData());
-  }, []);
+      const { data } = await getTopArtistsLong()
+      setTopArtists(data)
+    }
+    catchErrors(fetchData())
+  }, [])
 
   const changeRange = async range => {
-    const { data } = await apiCalls[range];
-    setTopArtists(data);
-    setActiveRange(range);
-  };
+    const { data } = await apiCalls[range]
+    setTopArtists(data)
+    setActiveRange(range)
+  }
 
-  const setRangeData = range => catchErrors(changeRange(range));
+  const setRangeData = range => catchErrors(changeRange(range))
 
   return (
     <Main>
@@ -185,7 +185,7 @@ const TopArtists = () => {
         )}
       </ArtistsContainer>
     </Main>
-  );
-};
+  )
+}
 
-export default TopArtists;
+export default TopArtists

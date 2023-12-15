@@ -1,131 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Spotify Tracks</title>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico" />
+  <title>Spotify Tops</title>
 
-    <meta name="description" content="A web app for visualizing personalized Spotify data" />
+  <meta name="description" content="A web app for visualizing personalized Spotify data" />
 
-    <meta property="og:title" content="Spotify Tracks" />
-    <meta property="og:description" content="A web app for visualizing personalized Spotify data" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://spotify-tops-fb12eb433b71.herokuapp.com" />
-    <meta property="og:site_name" content="Spotify Tracks" />
-    <meta property="og:image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Spotify Tops" />
+  <meta property="og:description" content="A web app for visualizing personalized Spotify data" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spotify-tops-fb12eb433b71.herokuapp.com" />
+  <meta property="og:site_name" content="Spotify Tops" />
+  <meta property="og:image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US" />
 
-    <meta itemprop="name" content="Spotify Tracks" />
-    <meta itemprop="description" content="A web app for visualizing personalized Spotify data" />
-    <meta itemprop="image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
+  <meta itemprop="name" content="Spotify Tops" />
+  <meta itemprop="description" content="A web app for visualizing personalized Spotify data" />
+  <meta itemprop="image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://spotify-tops-fb12eb433b71.herokuapp.com/" />
-    <meta name="twitter:site" content="@danydodson" />
-    <meta name="twitter:creator" content="@danydodson" />
-    <meta name="twitter:title" content="Spotify Tracks" />
-    <meta
-      name="twitter:description"
-      content="A web app for visualizing personalized Spotify data"
-    />
-    <meta name="twitter:image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
-    <meta name="twitter:image:alt" content="Spotify Tracks" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://spotify-tops-fb12eb433b71.herokuapp.com/" />
+  <meta name="twitter:site" content="@egoreeth" />
+  <meta name="twitter:creator" content="@egoreeth" />
+  <meta name="twitter:title" content="Spotify Tops" />
+  <meta name="twitter:description" content="A web app for visualizing personalized Spotify data" />
+  <meta name="twitter:image" content="https://spotify-tops-fb12eb433b71.herokuapp.com/og.png" />
+  <meta name="twitter:image:alt" content="Spotify Tops" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-16x16.png"
-    />
-    <meta
-      name="msapplication-TileImage"
-      content="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/ms-icon-144x144.png"
-    />
-    <meta name="msapplication-TileColor" content="#181818" />
-    <meta name="theme-color" content="#181818" />
-  </head>
-  <body>
-    <noscript> You need to enable JavaScript to run this app. </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <link rel="icon" type="image/png" sizes="32x32" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/favicon-16x16.png" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="apple-touch-icon" sizes="57x57" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/apple-icon-180x180.png" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="icon" type="image/png" sizes="192x192" href="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/android-icon-192x192.png" />
+
+  <meta name="msapplication-TileImage" content="https://spotify-tops-fb12eb433b71.herokuapp.com/favicons/ms-icon-144x144.png" />
+  <meta name="msapplication-TileColor" content="#181818" />
+  <meta name="theme-color" content="#181818" />
+</head>
+
+<body>
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <div id="root"></div>
+</body>
+
 </html>

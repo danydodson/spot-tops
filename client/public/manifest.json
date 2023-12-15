@@ -1,9 +1,14 @@
 {
   "name": "Spotify Tops",
   "short_name": "Spotify Tops",
-  "description": "Spotify profile",
-  "display": "minimal-ui",
   "start_url": "./",
+  "id": "/",
+  "description": "A web app for visualizing personalized Spotify data",
+  "display": "minimal-ui",
+  "display_override": "minimal-ui",
+  "theme_color": "#181818",
+  "background_color": "#181818",
+  "orientation": "any",
   "icons": [
     {
       "src": "/favicons/android-icon-36x36.png",

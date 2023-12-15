@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconGithub = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 438.549 438.549">
@@ -25,6 +25,6 @@ const IconGithub = () => (
           C438.536,184.851,428.728,148.168,409.132,114.573z"
     />
   </svg>
-);
+)
 
-export default IconGithub;
+export default IconGithub

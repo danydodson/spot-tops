@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from '@reach/router';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useMemo } from 'react'
+import { Link } from '@reach/router'
+import PropTypes from 'prop-types'
 import {
   getPlaylist,
   getRecommendationsForTracks,
@@ -9,14 +9,14 @@ import {
   addTracksToPlaylist,
   followPlaylist,
   doesUserFollowPlaylist,
-} from '../spotify';
-import { catchErrors } from '../utils';
+} from '../spotify'
+import { catchErrors } from '../utils'
 
-import TrackItem from './TrackItem';
+import TrackItem from './TrackItem'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media, Main } from '../styles';
-const { colors } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media, Main } from '../styles'
+const { colors } = theme
 
 const PlaylistHeading = styled.div`
   ${mixins.flexBetween};
@@ -27,89 +27,89 @@ const PlaylistHeading = styled.div`
   h2 {
     margin-bottom: 0;
   }
-`;
+`
 const SaveButton = styled.button`
   ${mixins.greenButton};
-`;
+`
 const OpenButton = styled.a`
   ${mixins.button};
-`;
+`
 const TracksContainer = styled.ul`
   margin-top: 50px;
-`;
+`
 const PlaylistLink = styled(Link)`
   &:hover,
   &:focus {
     color: ${colors.offGreen};
   }
-`;
+`
 
 const Recommendations = props => {
-  const { playlistId } = props;
+  const { playlistId } = props
 
-  const [playlist, setPlaylist] = useState(null);
-  const [recommendations, setRecommmendations] = useState(null);
-  const [recPlaylistId, setRecPlaylistId] = useState(null);
-  const [userId, setUserId] = useState(null);
-  const [isFollowing, setIsFollowing] = useState(false);
+  const [playlist, setPlaylist] = useState(null)
+  const [recommendations, setRecommmendations] = useState(null)
+  const [recPlaylistId, setRecPlaylistId] = useState(null)
+  const [userId, setUserId] = useState(null)
+  const [isFollowing, setIsFollowing] = useState(false)
 
   useEffect(() => {
     const fetchPlaylistData = async () => {
-      const { data } = await getPlaylist(playlistId);
-      setPlaylist(data);
-    };
-    catchErrors(fetchPlaylistData());
+      const { data } = await getPlaylist(playlistId)
+      setPlaylist(data)
+    }
+    catchErrors(fetchPlaylistData())
 
     const fetchUserData = async () => {
-      const { data } = await getUser();
-      setUserId(data.id);
-    };
-    catchErrors(fetchUserData());
-  }, [playlistId]);
+      const { data } = await getUser()
+      setUserId(data.id)
+    }
+    catchErrors(fetchUserData())
+  }, [playlistId])
 
   useMemo(() => {
     const fetchData = async () => {
       if (playlist) {
-        const { data } = await getRecommendationsForTracks(playlist.tracks.items);
-        setRecommmendations(data);
+        const { data } = await getRecommendationsForTracks(playlist.tracks.items)
+        setRecommmendations(data)
       }
-    };
-    catchErrors(fetchData());
-  }, [playlist]);
+    }
+    catchErrors(fetchData())
+  }, [playlist])
 
   // If recPlaylistId has been set, add tracks to playlist and follow
   useMemo(() => {
     const isUserFollowingPlaylist = async plistId => {
-      const { data } = await doesUserFollowPlaylist(plistId, userId);
-      setIsFollowing(data[0]);
-    };
+      const { data } = await doesUserFollowPlaylist(plistId, userId)
+      setIsFollowing(data[0])
+    }
 
     const addTracksAndFollow = async () => {
-      const uris = recommendations.tracks.map(({ uri }) => uri).join(',');
-      const { data } = await addTracksToPlaylist(recPlaylistId, uris);
+      const uris = recommendations.tracks.map(({ uri }) => uri).join(',')
+      const { data } = await addTracksToPlaylist(recPlaylistId, uris)
 
       // Then follow playlist
       if (data) {
-        await followPlaylist(recPlaylistId);
+        await followPlaylist(recPlaylistId)
         // Check if user is following so we can change the save to spotify button to open on spotify
-        catchErrors(isUserFollowingPlaylist(recPlaylistId));
+        catchErrors(isUserFollowingPlaylist(recPlaylistId))
       }
-    };
+    }
 
     if (recPlaylistId && recommendations && userId) {
-      catchErrors(addTracksAndFollow(recPlaylistId));
+      catchErrors(addTracksAndFollow(recPlaylistId))
     }
-  }, [recPlaylistId, recommendations, userId]);
+  }, [recPlaylistId, recommendations, userId])
 
   const createPlaylistOnSave = async () => {
     if (!userId) {
-      return;
+      return
     }
 
-    const name = `Recommended Tracks Based on ${playlist.name}`;
-    const { data } = await createPlaylist(userId, name);
-    setRecPlaylistId(data.id);
-  };
+    const name = `Recommended Tracks Based on ${playlist.name}`
+    const { data } = await createPlaylist(userId, name)
+    setRecPlaylistId(data.id)
+  }
 
   return (
     <Main>
@@ -136,11 +136,11 @@ const Recommendations = props => {
           recommendations.tracks.map((track, i) => <TrackItem track={track} key={i} />)}
       </TracksContainer>
     </Main>
-  );
-};
+  )
+}
 
 Recommendations.propTypes = {
   playlistId: PropTypes.string,
-};
+}
 
-export default Recommendations;
+export default Recommendations

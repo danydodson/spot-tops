@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconPlaylist = () => (
   <svg
@@ -15,6 +15,6 @@ const IconPlaylist = () => (
       <rect x="0" y="224" width="170.667" height="42.667" />
     </g>
   </svg>
-);
+)
 
-export default IconPlaylist;
+export default IconPlaylist

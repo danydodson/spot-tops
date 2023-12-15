@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { theme } from '../../styles';
-const { colors } = theme;
+import React from 'react'
+import styled from 'styled-components/macro'
+import { theme } from '../../styles'
+const { colors } = theme
 
 const Loader = styled.div`
   margin: 0 0 2em;
@@ -17,7 +17,7 @@ const Loader = styled.div`
   svg rect {
     fill: ${colors.grey};
   }
-`;
+`
 
 const IconLoader = () => (
   <Loader>
@@ -111,6 +111,6 @@ const IconLoader = () => (
       </rect>
     </svg>
   </Loader>
-);
+)
 
-export default IconLoader;
+export default IconLoader

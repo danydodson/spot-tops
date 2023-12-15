@@ -1,5 +1,5 @@
-import styled from 'styled-components/macro';
-import media from './media';
+import styled from 'styled-components/macro'
+import media from './media'
 
 const Section = styled.section`
   width: 100%;
@@ -16,6 +16,6 @@ const Section = styled.section`
   ${media.phablet`
     padding: 0 0 20px;
   `};
-`;
+`
 
-export default Section;
+export default Section

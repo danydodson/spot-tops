@@ -1,25 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from '@reach/router';
-import { formatDuration } from '../utils';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from '@reach/router'
+import { formatDuration } from '../utils'
 
-import { IconInfo } from './icons';
+import { IconInfo } from './icons'
 
-import styled from 'styled-components/macro';
-import { theme, mixins, media } from '../styles';
-const { colors, fontSizes, spacing } = theme;
+import styled from 'styled-components/macro'
+import { theme, mixins, media } from '../styles'
+const { colors, fontSizes, spacing } = theme
 
 const TrackLeft = styled.span`
   ${mixins.overflowEllipsis};
-`;
-const TrackRight = styled.span``;
+`
+const TrackRight = styled.span``
 const TrackArtwork = styled.div`
   display: inline-block;
   position: relative;
   width: 50px;
   min-width: 50px;
   margin-right: ${spacing.base};
-`;
+`
 const Mask = styled.div`
   ${mixins.flexCenter};
   position: absolute;
@@ -36,7 +36,7 @@ const Mask = styled.div`
   svg {
     width: 25px;
   }
-`;
+`
 const TrackContainer = styled(Link)`
   display: grid;
   grid-template-columns: auto 1fr;
@@ -51,12 +51,12 @@ const TrackContainer = styled(Link)`
       opacity: 1;
     }
   }
-`;
+`
 const TrackMeta = styled.div`
   display: grid;
   grid-template-columns: 1fr max-content;
   grid-gap: 10px;
-`;
+`
 const TrackName = styled.span`
   margin-bottom: 5px;
   border-bottom: 1px solid transparent;
@@ -64,17 +64,17 @@ const TrackName = styled.span`
   &:focus {
     border-bottom: 1px solid ${colors.white};
   }
-`;
+`
 const TrackAlbum = styled.div`
   ${mixins.overflowEllipsis};
   color: ${colors.lightGrey};
   font-size: ${fontSizes.sm};
   margin-top: 3px;
-`;
+`
 const TrackDuration = styled.span`
   color: ${colors.lightGrey};
   font-size: ${fontSizes.sm};
-`;
+`
 
 const TrackItem = ({ track }) => (
   <li>
@@ -110,10 +110,10 @@ const TrackItem = ({ track }) => (
       </TrackMeta>
     </TrackContainer>
   </li>
-);
+)
 
 TrackItem.propTypes = {
   track: PropTypes.object.isRequired,
-};
+}
 
-export default TrackItem;
+export default TrackItem
